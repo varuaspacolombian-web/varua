@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 const Stripe = require("stripe");
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
@@ -16,7 +14,7 @@ module.exports = async (req, res) => {
 
     try {
 
-        res.status(200).json({
+        return res.status(200).json({
 
             message: "Stripe connection successful."
 
@@ -26,7 +24,7 @@ module.exports = async (req, res) => {
 
         console.error(error);
 
-        res.status(500).json({
+        return res.status(500).json({
 
             error: error.message
 
