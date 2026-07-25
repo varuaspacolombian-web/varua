@@ -8,6 +8,8 @@ const summaryPrice = document.getElementById("summary-price");
 const customPayment = document.getElementById("custom-payment");
 const customDescription = document.getElementById("custom-description");
 const customAmount = document.getElementById("custom-amount");
+const checkoutButton = document.getElementById("checkout-button");
+
 async function loadServices() {
 
     try {
@@ -121,3 +123,80 @@ customAmount.addEventListener("input", () => {
 
 });
 loadServices();
+checkoutButton.addEventListener("click", async () => {
+
+    const selectedService = services.find(
+        item => item.id === serviceSelect.value
+    );
+
+    if (!selectedService) {
+
+        alert("Please select a treatment.");
+
+        return;
+
+    }
+
+    let payload = {};
+
+    // Pago personalizado
+
+    if (selectedService.id === "custom-payment") {
+
+        const amount = parseFloat(customAmount.value);
+
+        if (!amount || amount <= 0) {
+
+            alert("Please enter a valid amount.");
+
+            return;
+
+        }
+
+        payload = {
+
+            custom: true,
+
+            description: customDescription.value || "Custom Payment",
+
+            amount: amount
+
+        };
+
+    } else {
+
+        payload = {
+
+            serviceId: selectedService.id
+
+        };
+
+    }
+
+    try {
+
+        const response = await fetch("/api/checkout", {
+
+            method: "POST",
+
+            headers: {
+
+                "Content-Type": "application/json"
+
+            },
+
+            body: JSON.stringify(payload)
+
+        });
+
+        const data = await response.json();
+
+        console.log(data);
+
+    } catch (error) {
+
+        console.error(error);
+
+    }
+
+});
