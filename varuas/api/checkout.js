@@ -1,7 +1,5 @@
 const Stripe = require("stripe");
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-
 module.exports = async (req, res) => {
 
     if (req.method !== "POST") {
@@ -16,7 +14,11 @@ module.exports = async (req, res) => {
 
         return res.status(200).json({
 
-            message: "Stripe connection successful."
+            ok: true,
+
+            env: !!process.env.STRIPE_SECRET_KEY,
+
+            message: "Checkout API working"
 
         });
 
