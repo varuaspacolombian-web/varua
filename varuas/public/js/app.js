@@ -105,5 +105,19 @@ serviceSelect.addEventListener("change", () => {
     }
 
 });
+customAmount.addEventListener("input", () => {
 
+    const amount = parseFloat(customAmount.value);
+
+    if (!isNaN(amount) && amount > 0) {
+
+        summaryPrice.textContent = `$${amount.toFixed(2)} USD`;
+
+    } else {
+
+        summaryPrice.textContent = "$0.00 USD";
+
+    }
+
+});
 loadServices();
