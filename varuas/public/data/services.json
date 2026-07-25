@@ -1,0 +1,92 @@
+[
+    {
+        "id": "hydrafacial",
+        "name": "Hydrafacial",
+        "description": "Deep cleansing, exfoliation and intense hydration facial treatment.",
+        "duration": 60,
+        "price": 280,
+        "currency": "USD",
+        "active": true
+    },
+    {
+        "id": "hollywood-peel",
+        "name": "Hollywood Peel",
+        "description": "Laser carbon peel that leaves the skin smoother and brighter.",
+        "duration": 45,
+        "price": 250,
+        "currency": "USD",
+        "active": true
+    },
+    {
+        "id": "microneedling",
+        "name": "Microneedling",
+        "description": "Stimulates collagen production and improves skin texture.",
+        "duration": 60,
+        "price": 220,
+        "currency": "USD",
+        "active": true
+    },
+    {
+        "id": "bb-glow",
+        "name": "BB Glow",
+        "description": "Facial treatment that provides an instant glowing finish.",
+        "duration": 75,
+        "price": 250,
+        "currency": "USD",
+        "active": true
+    },
+    {
+        "id": "hifu",
+        "name": "HIFU Facial",
+        "description": "Non-invasive lifting and skin tightening treatment.",
+        "duration": 90,
+        "price": 450,
+        "currency": "USD",
+        "active": true
+    },
+    {
+        "id": "radiofrequency",
+        "name": "Radiofrequency Facial",
+        "description": "Facial radiofrequency to stimulate collagen and firm the skin.",
+        "duration": 60,
+        "price": 180,
+        "currency": "USD",
+        "active": true
+    },
+    {
+        "id": "led-light",
+        "name": "LED Light Therapy",
+        "description": "Light therapy that promotes skin healing and reduces inflammation.",
+        "duration": 30,
+        "price": 60,
+        "currency": "USD",
+        "active": true
+    },
+    {
+        "id": "acne-treatment",
+        "name": "Acne Treatment",
+        "description": "Professional facial treatment for acne-prone skin.",
+        "duration": 60,
+        "price": 200,
+        "currency": "USD",
+        "active": true
+    },
+    {
+        "id": "hyperpigmentation",
+        "name": "Hyperpigmentation & Melasma Treatment",
+        "description": "Treatment designed to improve uneven skin tone and dark spots.",
+        "duration": 60,
+        "price": 240,
+        "currency": "USD",
+        "active": true
+    },
+    {
+        "id": "facial-rejuvenation",
+        "name": "Facial Rejuvenation",
+        "description": "Advanced facial treatment focused on skin renewal and anti-aging.",
+        "duration": 75,
+        "price": 320,
+        "currency": "USD",
+        "active": true
+    }
+]

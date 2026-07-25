@@ -1,0 +1,11 @@
+{
+    "business": {
+        "name": "Varua Spa",
+        "email": "support@varuaspa.com",
+        "currency": "USD"
+    },
+
+    "payment": {
+        "provider": "Stripe"
+    }
+}

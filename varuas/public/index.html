@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Varua Spa | Secure Payments</title>
+
+    <meta name="description" content="Complete your payment securely with Stripe.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <main class="payment-page">
+
+        <section class="payment-card">
+
+            <!-- ==========================
+                    LOGO
+            =========================== -->
+
+            <div class="logo">
+
+                <img src="assets/logo.png" alt="Varua Spa">
+
+            </div>
+
+            <!-- ==========================
+                    HEADER
+            =========================== -->
+
+            <header class="header">
+
+                <h1>
+
+                    Complete Your Payment
+
+                </h1>
+
+                <p>
+
+                    Please select your treatment to continue with our secure checkout powered by Stripe.
+
+                </p>
+
+            </header>
+
+            <!-- ==========================
+                    SERVICE
+            =========================== -->
+
+            <section class="service-section">
+
+                <label for="service">
+
+                    Select Treatment
+
+                </label>
+
+                <select id="service">
+
+                    <select id="service">
+
+                    </select>
+
+                </select>
+
+            </section>
+
+            <!-- ==========================
+                    SUMMARY
+            =========================== -->
+
+            <section class="summary">
+
+                <h2>
+
+                    Payment Summary
+
+                </h2>
+
+                <div class="summary-item">
+
+                    <span>
+
+                        Treatment
+
+                    </span>
+
+                    <strong id="summary-name">
+
+                        --
+
+                    </strong>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <span>
+
+                        Description
+
+                    </span>
+
+                    <strong id="summary-description">
+
+                        --
+
+                    </strong>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <span>
+
+                        Duration
+
+                    </span>
+
+                    <strong id="summary-duration">
+
+                        --
+
+                    </strong>
+
+                </div>
+
+                <div class="summary-item total">
+
+                    <span>
+
+                        Total
+
+                    </span>
+
+                    <strong id="summary-price">
+
+                        --
+
+                    </strong>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================
+                    PAYMENT METHODS
+            =========================== -->
+
+            <section class="payment-methods">
+
+                <h2>
+
+                    Accepted Payment Methods
+
+                </h2>
+
+                <div class="payment-grid">
+
+                    <span>Visa</span>
+
+                    <span>Mastercard</span>
+
+                    <span>American Express</span>
+
+                    <span>Apple Pay</span>
+
+                    <span>Google Pay</span>
+
+                    <span>Klarna</span>
+
+                    <span>Affirm</span>
+
+                    <span>Afterpay</span>
+
+                    <span>ZIP</span>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================
+                    CHECKOUT
+            =========================== -->
+
+            <section class="checkout">
+
+                <button id="checkout-button">
+
+                    Continue to Secure Checkout
+
+                </button>
+
+            </section>
+
+            <!-- Stripe Checkout -->
+
+            <section class="stripe-container">
+
+                <div id="checkout">
+
+                </div>
+
+            </section>
+
+            <!-- ==========================
+                    FOOTER
+            =========================== -->
+
+            <footer>
+
+                <p>
+
+                    Need help?
+
+                </p>
+
+                <a href="mailto:support@varuaspa.com">
+
+                    support@varuaspa.com
+
+                </a>
+
+                <nav>
+
+                    <a href="https://sites.google.com/view/varuaspaa/legal">
+
+                        Privacy Policy
+
+                    </a>
+
+                    <a href="https://sites.google.com/view/varuaspaa/legal">
+
+                        Refund Policy
+
+                    </a>
+
+                    <a href="https://sites.google.com/view/varuaspaa/legal">
+
+                        Terms & Conditions
+
+                    </a>
+
+                </nav>
+
+                <small>
+
+                    © 2026 Varua Spa. All Rights Reserved.
+
+                </small>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>
