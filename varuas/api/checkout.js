@@ -66,29 +66,43 @@ module.exports = async (req, res) => {
         // ===========================
 
         const session = await stripe.checkout.sessions.create({
-  mode: "payment",
 
-  automatic_payment_methods: {
-    enabled: true,
-  },
+            mode: "payment",
 
-  line_items: [
-    {
-      price_data: {
-        currency: "usd",
-        product_data: {
-          name,
-          description,
-        },
-        unit_amount: amount,
-      },
-      quantity: 1,
-    },
-  ],
+            payment_method_types: ["card"],
 
-  success_url: "https://varua.vercel.app/success.html",
-  cancel_url: "https://varua.vercel.app/cancel.html",
-});
+            line_items: [
+
+                {
+
+                    price_data: {
+
+                        currency: "usd",
+
+                        product_data: {
+
+                            name,
+
+                            description
+
+                        },
+
+                        unit_amount: amount
+
+                    },
+
+                    quantity: 1
+
+                }
+
+            ],
+
+            success_url: "https://varua.vercel.app/success.html",
+
+            cancel_url: "https://varua.vercel.app/cancel.html"
+
+        });
+
         return res.status(200).json({
 
             url: session.url
