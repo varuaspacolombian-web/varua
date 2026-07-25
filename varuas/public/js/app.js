@@ -62,7 +62,7 @@ function updateSummary(service) {
 
     // Duración
 
-    if (service.duration && service.duration > 0) {
+    if (service.duration > 0) {
 
         summaryDuration.textContent = `${service.duration} Minutes`;
 
@@ -72,11 +72,11 @@ function updateSummary(service) {
 
     }
 
-    // Custom Payment
+    // Mostrar u ocultar el formulario de pago personalizado
 
-    if (service.custom) {
+    if (service.id === "custom-payment") {
 
-        customPayment.classList.remove("hidden");
+        customPayment.classList.add("show");
 
         summaryPrice.textContent = "$0.00 USD";
 
@@ -86,7 +86,7 @@ function updateSummary(service) {
 
     } else {
 
-        customPayment.classList.add("hidden");
+        customPayment.classList.remove("show");
 
         summaryPrice.textContent = `$${service.price} ${service.currency}`;
 
