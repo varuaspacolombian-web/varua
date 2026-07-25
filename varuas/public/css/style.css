@@ -471,11 +471,15 @@ footer small{
 
 }
 
+/* ==========================
+   CUSTOM PAYMENT
+========================== */
+
 .custom-payment{
 
-    margin-top:20px;
+    display:none;
 
-    display:flex;
+    margin-top:20px;
 
     flex-direction:column;
 
@@ -488,6 +492,12 @@ footer small{
     border-radius:14px;
 
     background:#FAFAFA;
+
+}
+
+.custom-payment.show{
+
+    display:flex;
 
 }
 
