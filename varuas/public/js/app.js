@@ -52,17 +52,37 @@ function renderServices() {
 
 function updateSummary(service) {
 
+    // Nombre
+
     summaryName.textContent = service.name;
+
+    // Descripción
 
     summaryDescription.textContent = service.description;
 
-    summaryDuration.textContent = `${service.duration || "-"} Minutes`;
+    // Duración
+
+    if (service.duration && service.duration > 0) {
+
+        summaryDuration.textContent = `${service.duration} Minutes`;
+
+    } else {
+
+        summaryDuration.textContent = "--";
+
+    }
+
+    // Custom Payment
 
     if (service.custom) {
 
         customPayment.classList.remove("hidden");
 
         summaryPrice.textContent = "$0.00 USD";
+
+        customDescription.value = "";
+
+        customAmount.value = "";
 
     } else {
 
