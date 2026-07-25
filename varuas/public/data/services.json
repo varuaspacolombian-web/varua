@@ -128,5 +128,15 @@
     "stripePriceId": "",
     "image": "facial-rejuvenation.webp",
     "active": true
-  }
+  },
+  {
+    "id": "custom-payment",
+    "name": "Other Amount",
+    "description": "Use this option for deposits, remaining balances or custom payments.",
+    "duration": 0,
+    "price": 0,
+    "currency": "USD",
+    "custom": true,
+    "active": true
+}
 ]
