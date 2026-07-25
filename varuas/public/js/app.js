@@ -1,12 +1,13 @@
 let services = [];
 
 const serviceSelect = document.getElementById("service");
-
 const summaryName = document.getElementById("summary-name");
 const summaryDescription = document.getElementById("summary-description");
 const summaryDuration = document.getElementById("summary-duration");
 const summaryPrice = document.getElementById("summary-price");
-
+const customPayment = document.getElementById("custom-payment");
+const customDescription = document.getElementById("custom-description");
+const customAmount = document.getElementById("custom-amount");
 async function loadServices() {
 
     try {
@@ -55,9 +56,21 @@ function updateSummary(service) {
 
     summaryDescription.textContent = service.description;
 
-    summaryDuration.textContent = `${service.duration} Minutes`;
+    summaryDuration.textContent = `${service.duration || "-"} Minutes`;
 
-    summaryPrice.textContent = `$${service.price} ${service.currency}`;
+    if (service.custom) {
+
+        customPayment.classList.remove("hidden");
+
+        summaryPrice.textContent = "$0.00 USD";
+
+    } else {
+
+        customPayment.classList.add("hidden");
+
+        summaryPrice.textContent = `$${service.price} ${service.currency}`;
+
+    }
 
 }
 
