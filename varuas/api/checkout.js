@@ -69,7 +69,7 @@ module.exports = async (req, res) => {
 
             mode: "payment",
 
-            payment_method_types: ["card"],
+           
 
             line_items: [
 
