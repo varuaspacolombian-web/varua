@@ -97,9 +97,9 @@ module.exports = async (req, res) => {
 
             ],
 
-            success_url: "https://varua.vercel.app/success.html",
+            success_url: "https://pay.varuaspa.net/sucess.html",
 
-            cancel_url: "https://varua.vercel.app/cancel.html"
+            cancel_url: "https://pay.varuaspa.net/cancel.html"
 
         });
 
